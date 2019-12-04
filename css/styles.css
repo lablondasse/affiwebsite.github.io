@@ -153,6 +153,43 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  padding-left: 7%;
+  padding-right: 7%;
+
+}
+
+/*division of page*/
+header{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+main{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  min-width: 200px;
+  display: grid;
+}
+
+aside{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+}
+
+footer{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: black;
+  color: white;
+  padding: 1%;
+  margin-top: inherit;
 }
 
 article > * + * {
@@ -172,14 +209,16 @@ h1,
 .h1 {
   font-size: var(--font-size-display);
   line-height: var(--line-height);
+  font-family: cursive;
 }
 
 h2,
 .h2 {
   font-size: var(--font-size-xx-large);
   line-height: var(--line-height-display);
+  text-align: left;
+  font-family: cursive;
 }
-
 h3,
 .h3 {
   font-size: var(--font-size-large);
@@ -223,7 +262,7 @@ code {
 
 hr {
   display: block;
-  height: 1px;
+  height: 10px;
   border: 0;
   border-top: 1px solid var(--black-10);
   margin: 1em 0;
@@ -332,4 +371,10 @@ h3 {
 .leadline {
   font-size: var(--font-size-large);
   line-height: var(--line-height-alt);
+}
+
+/*grid disposition*/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
